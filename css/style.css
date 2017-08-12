@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
   .monkee {
     @include clearfix;
@@ -855,5 +856,128 @@ table {
 
 .fees-name {
   width: 3rem; }
+
+.card-wrap {
+  padding: .3rem .2rem; }
+
+.card-box {
+  position: relative;
+  height: 3.2rem;
+  background-color: #0099ff;
+  color: #ffffff;
+  padding: .4rem;
+  -webkit-border-radius: 0.1rem;
+  -moz-border-radius: 0.1rem;
+  border-radius: 0.1rem;
+  -webkit-box-shadow: 4px 4px 0 #0b89dc;
+  -moz-box-shadow: 4px 4px 0 #0b89dc;
+  box-shadow: 4px 4px 0 #0b89dc;
+  border: 1px solid #44b4ff; }
+  .card-box.lost {
+    background-color: #7b7b7b;
+    -webkit-box-shadow: 4px 4px 0 #676767;
+    -moz-box-shadow: 4px 4px 0 #676767;
+    box-shadow: 4px 4px 0 #676767;
+    border-color: #a2a2a2;
+    text-decoration: line-through; }
+    .card-box.lost:after {
+      content: '已挂失'; }
+  .card-box:after {
+    content: 'Card';
+    position: absolute;
+    font-size: 1.6rem;
+    color: #ffffff;
+    top: .2rem;
+    right: 0;
+    opacity: .1;
+    font-weight: bold; }
+  .card-box .iconfont {
+    position: absolute;
+    right: .3rem;
+    top: .2rem;
+    font-size: .5rem;
+    line-height: 1;
+    z-index: 1; }
+  .card-box .name {
+    font-size: .32rem;
+    margin-bottom: .1rem; }
+  .card-box .no {
+    font-size: .64rem; }
+  .card-box .school-number {
+    margin-top: .32rem;
+    font-size: .24rem; }
+  .card-box .price {
+    position: absolute;
+    right: .4rem;
+    bottom: .3rem;
+    font-size: .5rem;
+    color: #ffffff;
+    font-style: italic; }
+
+.bind-wrap h2 {
+  margin-top: 60px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: normal;
+  color: #373230; }
+.bind-wrap .login-form {
+  padding: 0 30px; }
+  .bind-wrap .login-form .dis-password {
+    text-align: right; }
+    .bind-wrap .login-form .dis-password a {
+      color: #a3a1a0; }
+.bind-wrap .weui-cell {
+  padding: 5px 0;
+  margin-bottom: 10px; }
+  .bind-wrap .weui-cell .weui-label {
+    width: 50px; }
+  .bind-wrap .weui-cell:before {
+    display: none; }
+  .bind-wrap .weui-cell:after {
+    content: " ";
+    position: absolute;
+    left: 0;
+    top: initial;
+    bottom: 0;
+    right: 0;
+    height: 1px;
+    border-top: 1px solid #D9D9D9;
+    color: #D9D9D9;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transform: scaleY(0.5);
+    transform: scaleY(0.5); }
+
+.balance-wrap {
+  text-align: center;
+  padding: .5rem 0; }
+  .balance-wrap .balance-data {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    line-height: 2rem;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    text-align: center;
+    background-color: #f7657d;
+    color: #ffffff;
+    font-size: .36rem; }
+
+.ewm-box {
+  margin-top: .3rem;
+  display: inline-block;
+  padding: .3rem;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  -webkit-border-radius: 0.1rem;
+  -moz-border-radius: 0.1rem;
+  border-radius: 0.1rem; }
+  .ewm-box img {
+    width: 3.8rem;
+    height: 3.8rem; }
 
 /*# sourceMappingURL=style.css.map */
