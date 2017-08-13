@@ -132,7 +132,15 @@ img {
   top: 0;
   z-index: 100;
   height: .88rem;
+  background-color: #ffffff;
   @include flexbox();
+  .logo{
+    padding: .16rem .3rem;
+    height: .88rem;
+    img{
+      height: 100%;
+    }
+  }
   .header-left {
     .city-select {
       display: block;
@@ -359,6 +367,11 @@ img {
   }
   .weui-grid {
     padding: .2rem;
+    &.disabled{
+      .weui-grid__icon{
+        background-color: #dcdcdc !important;
+      }
+    }
     &:before, &:after {
       display: none;
     }

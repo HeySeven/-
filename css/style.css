@@ -236,11 +236,17 @@ img {
   top: 0;
   z-index: 100;
   height: .88rem;
+  background-color: #ffffff;
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flexbox;
   display: flex; }
+  .header .logo {
+    padding: .16rem .3rem;
+    height: .88rem; }
+    .header .logo img {
+      height: 100%; }
   .header .header-left .city-select {
     display: block;
     padding-left: .2rem;
@@ -415,6 +421,8 @@ img {
     display: none; }
   .index-menu-b .weui-grid {
     padding: .2rem; }
+    .index-menu-b .weui-grid.disabled .weui-grid__icon {
+      background-color: #dcdcdc !important; }
     .index-menu-b .weui-grid:before, .index-menu-b .weui-grid:after {
       display: none; }
     .index-menu-b .weui-grid:nth-child(1) .weui-grid__icon {

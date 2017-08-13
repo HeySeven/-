@@ -22,8 +22,12 @@
     <script src="plugins/fastclick/fastclick.js"></script>
 </head>
 <body>
-
-<div class="view">
+<div class="header">
+    <a href="###" class="logo">
+        <img src="images/logo.png" alt="">
+    </a>
+</div>
+<div class="view has-navbar">
     <div class="page">
         <div class="index-slide">
             <!-- Swiper -->
@@ -72,7 +76,7 @@
                 </div>
                 <p class="weui-grid__label">我要付款</p>
             </a>
-            <a href="###" class="weui-grid js_grid">
+            <a href="###" class="weui-grid js_grid disabled">
                 <div class="weui-grid__icon">
                     <i class="iconfont icon-fenxi4"></i>
                 </div>
@@ -81,19 +85,19 @@
         </div>
         <div class="grids-title m-t ui-border-b">校园服务</div>
         <div class="weui-grids index-menu-b">
-            <a href="###" class="weui-grid js_grid">
+            <a href="###" class="weui-grid js_grid disabled">
                 <div class="weui-grid__icon">
                     <i class="iconfont icon-jiance1"></i>
                 </div>
                 <p class="weui-grid__label">宿舍用电</p>
             </a>
-            <a href="###" class="weui-grid js_grid">
+            <a href="###" class="weui-grid js_grid disabled">
                 <div class="weui-grid__icon">
                     <i class="iconfont icon-jiance6"></i>
                 </div>
                 <p class="weui-grid__label">校园上网</p>
             </a>
-            <a href="###" class="weui-grid js_grid">
+            <a href="###" class="weui-grid js_grid disabled">
                 <div class="weui-grid__icon">
                     <i class="iconfont icon-10"></i>
                 </div>
@@ -102,19 +106,19 @@
         </div>
         <div class="grids-title m-t ui-border-b">校园资讯</div>
         <div class="weui-grids m-b index-menu-b">
-            <a href="###" class="weui-grid js_grid">
+            <a href="###" class="weui-grid js_grid disabled">
                 <div class="weui-grid__icon">
                     <i class="iconfont icon-23"></i>
                 </div>
                 <p class="weui-grid__label">通知公告</p>
             </a>
-            <a href="###" class="weui-grid js_grid">
+            <a href="###" class="weui-grid js_grid disabled">
                 <div class="weui-grid__icon">
                     <i class="iconfont icon-fenxi6"></i>
                 </div>
                 <p class="weui-grid__label">讲座资讯</p>
             </a>
-            <a href="###" class="weui-grid js_grid">
+            <a href="###" class="weui-grid js_grid disabled">
                 <div class="weui-grid__icon">
                     <i class="iconfont icon-26"></i>
                 </div>
@@ -128,6 +132,12 @@
 <script src="plugins/swiper/js/swiper.min.js"></script>
 <script src="plugins/jquery-weui/js/jquery-weui.min.js"></script>
 <script src="js/main.js"></script>
-
+<script>
+    $(function () {
+        $('.js_grid.disabled').click(function () {
+            $.toast("功能即将开放", "text");
+        })
+    })
+</script>
 </body>
 </html>
