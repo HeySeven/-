@@ -11,4 +11,11 @@ $(function () {
         pagination: '.swiper-pagination',
         paginationClickable: true
     });
+    $('#news-container').vTicker({
+        speed: 700,
+        pause: 5000,
+        animation: 'fade',
+        mousePause: false,
+        showItems: 1
+    });
 });

@@ -236,28 +236,35 @@ img {
   top: 0;
   z-index: 100;
   height: .88rem;
-  background-color: #ffffff;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: flex; }
+  background-color: #ffffff; }
   .header .logo {
+    position: absolute;
+    left: 0;
+    top: 0;
     padding: .16rem .3rem;
     height: .88rem; }
     .header .logo img {
       height: 100%; }
-  .header .header-left .city-select {
-    display: block;
-    padding-left: .2rem;
-    height: .88rem;
-    line-height: .88rem;
+  .header .header-left {
+    position: absolute;
+    left: 0;
+    top: 0; }
+    .header .header-left .city-select {
+      display: block;
+      padding-left: .2rem;
+      height: .88rem;
+      line-height: .88rem;
+      text-align: center;
+      font-size: .28rem;
+      color: #5c93f7;
+      vertical-align: middle; }
+      .header .header-left .city-select i {
+        vertical-align: middle;
+        font-size: .4rem; }
+  .header .header-center {
     text-align: center;
-    font-size: .24rem;
-    color: #333;
-    vertical-align: middle; }
-    .header .header-left .city-select i {
-      font-size: .24rem; }
+    line-height: .88rem;
+    font-size: .32rem; }
   .header .search-wrap {
     -webkit-box-flex: 1;
     -webkit-flex: 1;
@@ -313,6 +320,46 @@ img {
       background-color: #f8f8f8;
       opacity: 1;
       filter: alpha(opacity=100); }
+
+.hotbox {
+  background-color: #ffffff;
+  height: .6rem;
+  overflow: hidden; }
+  .hotbox:before, .hotbox:after {
+    content: " ";
+    display: table; }
+  .hotbox:after {
+    clear: both; }
+  .hotbox .hot-l {
+    float: left;
+    padding: 0 .2rem;
+    height: .6rem;
+    line-height: .6rem;
+    font-size: .2rem;
+    text-align: center;
+    color: #BFA579; }
+    .hotbox .hot-l i {
+      vertical-align: middle;
+      font-size: .4rem; }
+  .hotbox .hot-r {
+    padding: 0 10px;
+    height: .6rem;
+    line-height: .6rem;
+    overflow: hidden;
+    font-size: .2rem;
+    zoom: 1; }
+    .hotbox .hot-r ul {
+      left: 10px;
+      right: 10px;
+      list-style: none; }
+      .hotbox .hot-r ul li {
+        height: .6rem; }
+        .hotbox .hot-r ul li a {
+          display: block;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          color: #333; }
 
 .tabbar {
   position: fixed;
@@ -786,13 +833,28 @@ table {
   -moz-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
-  padding: .3rem;
-  padding-left: 0;
+  padding: .3rem .3rem .3rem 0;
   margin-left: .3rem;
   font-size: 0.24rem; }
   .list-item .weui-icon_msg {
+    width: 1rem;
+    height: 1rem;
+    text-align: center;
+    background-color: #0099ff;
+    color: #ffffff;
     margin-right: .2rem;
-    font-size: .8rem; }
+    font-size: .8rem;
+    line-height: 1rem;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%; }
+  .list-item .list-content {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -moz-box-flex: 1;
+    -moz-flex: 1;
+    -ms-flex: 1;
+    flex: 1; }
   .list-item .des-info {
     color: #f7657d; }
 
@@ -939,7 +1001,7 @@ table {
   padding: 5px 0;
   margin-bottom: 10px; }
   .bind-wrap .weui-cell .weui-label {
-    width: 50px; }
+    width: 70px; }
   .bind-wrap .weui-cell:before {
     display: none; }
   .bind-wrap .weui-cell:after {
@@ -1009,5 +1071,11 @@ table {
     font-size: .4rem;
     color: #878787;
     margin-bottom: .3rem; }
+
+.weui-icon_toast {
+  margin-top: .1rem; }
+
+.weui-toast_content {
+  font-size: 0.28rem; }
 
 /*# sourceMappingURL=style.css.map */

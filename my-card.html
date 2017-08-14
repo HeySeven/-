@@ -11,7 +11,7 @@
     <meta content="telephone=no" name="format-detection">
     <meta name="x5-fullscreen" content="true">
     <meta name="full-screen" content="yes">
-    <link rel="stylesheet" href="http://at.alicdn.com/t/font_363663_m2idem5patoz85mi.css">
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_363663_6cas4l6q9awz5mi.css">
     <link rel="stylesheet" href="plugins/weui/weui.min.css">
     <link rel="stylesheet" href="plugins/jquery-weui/css/jquery-weui.css">
     <link rel="stylesheet" href="plugins/swiper/css/swiper.min.css">
@@ -22,13 +22,17 @@
     <script src="plugins/fastclick/fastclick.js"></script>
 </head>
 <body>
-
-<div class="view">
+<div class="header ui-border-b">
+    <div class="header-left">
+        <a class="city-select" href="index.html"><i class="iconfont icon-arrow-left"></i>首页</a>
+    </div>
+    <div class="header-center">校园卡</div>
+</div>
+<div class="view has-navbar">
     <div class="page">
         <div class="card-wrap">
-
-            <div class="card-box">
-                <i id="card-control" class="iconfont icon-more"></i>
+            <div class="card-box"  id="card-control" >
+                <i class="iconfont icon-more"></i>
                 <div class="name">王大力</div>
                 <div class="no">NO：34556</div>
                 <div class="school-number">学号：20070978</div>
@@ -57,18 +61,7 @@
                     text: "充值",
                     onClick: function () {
                         //如果参数过多，建议通过 object 方式传入
-                        $.prompt({
-                            title: '充值金额',
-                            text: '',
-                            input: '0.0',
-                            empty: false, // 是否允许为空
-                            onOK: function (input) {
-                                //点击确认
-                            },
-                            onCancel: function () {
-                                //点击取消
-                            }
-                        });
+                        window.location.href='recharge.html'
                     }
                 }, {
                     text: "挂失",
@@ -78,7 +71,7 @@
                             title: '输入密码',
                             onOK: function (input) {
                                 //点击确认
-                                $.toptip('操作成功', 'success');
+                                $.toast("操作成功");
                                 $('.card-box').addClass('lost');
                             },
                             onCancel: function () {
@@ -91,6 +84,10 @@
                     text: "取消绑定",
                     onClick: function () {
                         //do something
+                        $.alert("确定取消绑定？", "警告", function() {
+                            //点击确认后的回调函数
+                            $.toast("操作成功");
+                        });
                     }
                 }]
             });
