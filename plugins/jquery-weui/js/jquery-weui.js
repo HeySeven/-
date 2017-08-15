@@ -3356,6 +3356,7 @@ if (typeof define === 'function' && define.amd) {
       }
       config = {
         text: text,
+        type: type,
         title: title,
         input: input,
         onOK: onOK,
@@ -3365,7 +3366,7 @@ if (typeof define === 'function' && define.amd) {
     }
 
     var modal = $.modal({
-      text: '<p class="weui-prompt-text">'+(config.text || '')+'</p><input type="text" class="weui-input weui-prompt-input" id="weui-prompt-input" value="' + (config.input || '') + '" />',
+      text: '<p class="weui-prompt-text">'+(config.text || '')+'</p><input type='+(config.type || 'text')+' class="weui-input weui-prompt-input" id="weui-prompt-input" value="' + (config.input || '') + '" />',
       title: config.title,
       autoClose: false,
       buttons: [

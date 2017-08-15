@@ -55,6 +55,7 @@
 <script src="js/main.js"></script>
 <script>
     $(function () {
+        $.showLoading();
         $('#card-control').click(function () {
             $.actions({
                 actions: [{
@@ -69,6 +70,7 @@
                         //如果参数过多，建议通过 object 方式传入
                         $.prompt({
                             title: '输入密码',
+                            type: 'password',
                             onOK: function (input) {
                                 //点击确认
                                 $.toast("操作成功");
